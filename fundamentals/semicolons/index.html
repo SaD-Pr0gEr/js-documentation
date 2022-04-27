@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <p>Before the script...</p>
+  
+    <script>
+      alert( 'Hello, world!' );
+      // it's work too cause browser by default thinks line breaks as semicolons
+      alert('Hello')
+      alert('World')
+      //  But “in most cases” does not mean “always”
+      // It's wrong syntax but it's works too(without semicolons after +, 1 and 2)
+      alert(3 +
+        1
+        + 2
+      );
+      // But there are situations where JavaScript “fails” to assume a semicolon where it is really needed.
+      // ERROR EXAMPLE:
+      alert("Hello")[1, 2].forEach(alert);
+      alert("Hello")
+      [1, 2].forEach(alert);  
+      // Here we didn't write semicolon at the end
+    </script>
+  
+    <p>...After the script.</p>
+  
+  </body>
+</html>
